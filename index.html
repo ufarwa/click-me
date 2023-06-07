@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .rotate {
+      transition: transform 0.5s ease;
+    }
+    .rotate.clicked {
+      transform: rotate(360deg);
+      color: palegreen;
+      font-size: 500px;
+    }
+    *{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+  </style>
+</head>
+<body>
+  <h1 id="myHeading" class="rotate">Click me!</h1>
+
+  <script>
+    var heading = document.getElementById("myHeading");
+
+    heading.addEventListener("click", function() {
+      this.classList.toggle("clicked");
+    });
+  </script>
+</body>
+</html>
